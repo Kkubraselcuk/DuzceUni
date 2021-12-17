@@ -1,0 +1,45 @@
+﻿@model Success
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="~/font/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/style.css" type="text/css">
+<link href="~/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="~/owl-carousel/owl.theme.css" rel="stylesheet">
+<link rel="stylesheet" href="~/css/isotope-docs.css" media="screen">
+<link rel="stylesheet" href="~/css/baguetteBox.css">
+<hr />
+<form method="post" asp-controller="AdminPanel" asp-action="UpdateSuccess">
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+
+            <input type="hidden" name="DuyuruId" value="@Model.Id" />
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" value="@Model.Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Number"></label>
+                <input asp-for="Number" class="form-control" value="@Model.Number" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Icon"></label>
+                <textarea asp-for="Icon" class="form-control">@Model.Icon</textarea>
+                <span asp-validation-for="Icon" class="text-danger"></span>
+            </div>
+            
+            <br />
+            <button type="submit" class="btn btn-lg btn-warning">Güncelle</button>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</form>
+

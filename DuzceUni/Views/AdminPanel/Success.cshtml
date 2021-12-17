@@ -1,0 +1,45 @@
+﻿@model List<Success>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Başarılar";
+}
+
+<link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="~/font/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/style.css" type="text/css">
+<link href="~/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="~/owl-carousel/owl.theme.css" rel="stylesheet">
+<link rel="stylesheet" href="~/css/isotope-docs.css" media="screen">
+<link rel="stylesheet" href="~/css/baguetteBox.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+<h2>Duyurular</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Yetkinlik</th>
+        <th>Sayı</th>
+        <th>Icon</th>
+    </tr>
+
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.Name</td>
+            <td>@d.Number</td>
+            <td>@d.Icon</td>
+            <td><a href="/AdminPanel/DeleteSuccess/@d.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/AdminPanel/UpdateSuccess/@d.Id" class="btn btn-success">Güncelle</a></td>
+
+        </tr>
+
+
+    }
+</table>
+<div style="margin-bottom:1000px;">
+    <br />
+    <a asp-action="AddSuccess" asp-controller="AdminPanel" class="btn btn-lg btn-warning">Ekle</a>
+</div>

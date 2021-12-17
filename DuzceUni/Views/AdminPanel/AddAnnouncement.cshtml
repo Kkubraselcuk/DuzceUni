@@ -1,0 +1,40 @@
+﻿@model DuzceUni.Models.Blog
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Duyuru Ekle";
+}
+
+<link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="~/font/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/style.css" type="text/css">
+<link href="~/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="~/owl-carousel/owl.theme.css" rel="stylesheet">
+<link rel="stylesheet" href="~/css/isotope-docs.css" media="screen">
+<link rel="stylesheet" href="~/css/baguetteBox.css">
+<br />
+<br />
+<br />
+
+<div class="container">
+    <form asp-for="form-group" method="post">
+        <label for="blogdate">Tarih</label> <br />
+        @Html.TextBoxFor(item => item.Date, new { @class = "form-control" })<br />
+        <label for="blogtitle">Başlık</label>
+        @Html.TextBoxFor(item => item.Title, new { @class = "form-control" })<br />
+        <label for="blogtitle">Konu</label>
+        @Html.TextBoxFor(item => item.Short_Description, new { @class = "form-control" })<br />
+        <label for="blogtitle">Resim Linki</label>
+        @Html.TextBoxFor(item => item.ImageUrl, new { @class = "form-control" })<br />
+        <label for="blogdesc">Duyuru</label><br />
+        @Html.TextAreaFor(item => item.Description, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info">Ekle</button>
+    </form>
+</div>
+
+<br />
+<br />
+<br />

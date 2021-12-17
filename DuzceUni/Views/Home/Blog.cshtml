@@ -1,0 +1,33 @@
+﻿@model List<Blog>
+<section id="blog" class="">
+    <!-- =============== container =============== -->
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h2>Duyurular</h2>
+            </div>
+
+            @foreach (var duyuru in Model)
+            {
+                <div class="col-xs-12 col-sm-4 col-md-4 wow fadeInUp animated" data-wow-delay=".1s">
+                    <div class="blog-img">
+                        <img src=@duyuru.ImageUrl />
+                    </div>
+                    <div class="row">
+
+
+                        <div class="data">2021</div>
+                        <div class="month">@duyuru.Date</div>
+                    </div>
+                    <div class="row">
+                        <h3>@duyuru.Title</h3>
+                        <p>@duyuru.Short_Description</p>
+                        <a href="/Home/BlogDetail/@duyuru.Id">Detay</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+    <!-- =============== container end =============== -->
+</section>

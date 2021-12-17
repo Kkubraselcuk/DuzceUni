@@ -1,0 +1,37 @@
+﻿@model DuzceUni.Models.Success
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Yetkinlik Ekle";
+}
+
+<link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="~/font/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/style.css" type="text/css">
+<link href="~/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="~/owl-carousel/owl.theme.css" rel="stylesheet">
+<link rel="stylesheet" href="~/css/isotope-docs.css" media="screen">
+<link rel="stylesheet" href="~/css/baguetteBox.css">
+<br />
+<br />
+<br />
+
+<div class="container">
+    <form asp-for="form-group" method="post">
+        <label for="blogdate">Yetkinlik</label> <br />
+        @Html.TextBoxFor(item => item.Name, new { @class = "form-control" })<br />
+        <label for="blogtitle">Sayı</label>
+        @Html.TextBoxFor(item => item.Number, new { @class = "form-control" })<br />
+        <label for="blogtitle">Icon</label>
+        @Html.TextBoxFor(item => item.Icon, new { @class = "form-control" })<br />
+        
+        <br />
+        <button class="btn btn-info">Ekle</button>
+    </form>
+</div>
+
+<br />
+<br />
+<br />

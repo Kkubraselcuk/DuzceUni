@@ -1,0 +1,27 @@
+﻿@model List<Cooperation>
+<section class="units">
+    <div class="row" style="width: 100vw; height: 15vh; background-color: rgb(75, 75, 75);"></div>
+    <div class="row">
+        <div class="col-md-2 col-sm-12">
+            @await Component.InvokeAsync("SpecializationMenu")
+        </div>
+
+
+        <div class="col-md-10 col-sm-12">
+            <div class="container" style="margin-left:15px;">
+                <h2>İş Birliği Protokolleri</h2><br />
+                @foreach (var item in Model)
+                {
+            <p style="margin-bottom: 20px;">
+                <span>@item.Name</span>
+                <span>@item.Date</span>
+            </p>
+                    <div><img src="@item.ImageUrl" /></div><br />
+                }
+
+                <br /><br />
+
+            </div>
+        </div>
+    </div><br /><br /><br /><br /><br />
+</section>

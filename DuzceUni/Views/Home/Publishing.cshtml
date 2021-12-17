@@ -1,0 +1,26 @@
+﻿@model List<Publishing>
+<section id="Yayinlar" class="Yayinlar">
+    <!-- =============== container =============== -->
+    <div class="container-fluid">
+        <div class="row" style="width: 100vw; height: 15vh; background-color: rgb(75, 75, 75);"></div>
+
+        <div class="row" style="margin: 50px 150px;">
+
+            @*<div class="title row">
+                    <h2>Yayınlar</h2>
+                </div>*@
+
+            @foreach (var yayin in Model)
+            {
+                <div class="col-xs-12 col-sm-4 col-md-3 wow fadeInUp animated">
+                    <a href="@yayin.Link">
+                        <img src="@yayin.ImageUrl" alt="Yayın" style="width: 200px;" />
+                    </a><br />
+                    <span>@yayin.Title</span><br />
+                </div>
+            }
+
+        </div>
+    </div>
+    <!-- =============== container end =============== -->
+</section>

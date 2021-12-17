@@ -1,0 +1,110 @@
+﻿<style>
+    
+    .active {
+        background-color: #4CAF50;
+    }
+
+    .btn-bg-color {
+        background-color: white;
+        /*background-color: #C8C6C6;*/
+    }
+
+    .btn:hover {
+        background-color: #FFA100;
+    }
+    .btn-group-vertical{
+        width: 100%;
+        max-width: 100%;
+    }
+    button, .btn-group {
+        width: 100%;
+        max-width: 100%;
+    }
+</style>
+
+
+<div class="btn-group-vertical" role="group" aria-label="...">
+
+
+    <a asp-controller="FastAccess" asp-action="Duzce" class="btn btn-default btn-lg btn-block btn-bg-color active" role="button" aria-pressed="true">Düzce</a>
+    <a asp-controller="FastAccess" asp-action="Kurulus" class="btn btn-default btn-lg btn-block btn-bg-color " role="button" aria-pressed="true">Kuruluş</a>
+
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Yönetim
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a asp-controller="FastAccess" asp-action="Rektor">Rektör</a></li>
+            <li><a asp-controller="FastAccess" asp-action="RektorYardimcilari">Rektör Yardımcıları</a></li>
+            <li><a asp-controller="FastAccess" asp-action="SenatoKurulu">Senato</a></li>
+            <li><a asp-controller="FastAccess" asp-action="YonetimKurulu">Yönetim Kurulu</a></li>
+            <li><a asp-controller="FastAccess" asp-action="GenelSekreter">Genel Sekreter</a></li>
+            <li><a href="https://cdn.duzce.edu.tr/File/GetFile/03869186-84f4-4f6d-81e0-cbcc4412b10c">Teşkilat Şeması</a></li>
+            @*<li><a href="#">Senato ve Yönetim Kurulu Kararları</a></li>*@
+            <li><a asp-controller="FastAccess" asp-action="Rektorlerimiz">Rektörlerimiz</a></li>
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sayılarla DÜ
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Öğrenci Sayıları</a></li>
+            <li><a href="#">Personel Sayıları</a></li>
+            <li><a href="#">Bölüm ve Program Sayıları</a></li>
+            <li><a asp-controller="FastAccess" asp-action="ProjeSayilari">Proje Sayıları</a></li>
+            <li><a asp-controller="FastAccess" asp-action="FikriMulkiyet">Fikri Mülkiyet</a></li>
+            <li><a asp-controller="FastAccess" asp-action="Derslik">Derslik</a></li>
+            <li><a href="#">Kapalı Alan</a></li>
+            <li><a  asp-controller="FastAccess" asp-action="UIveDR">Üniversite İzleme ve Değerlendirme Raporu</a></li>
+            <li><a asp-controller="FastAccess" asp-action="Butce">Bütçe</a></li>
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sıralamalar
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a asp-controller="FastAccess" asp-action="URAP">URAP</a></li>
+            <li><a asp-controller="FastAccess" asp-action="THE">THE</a></li>
+            <li><a asp-controller="FastAccess" asp-action="GirisimcilikEndeksi">Girişimcilik Endeksi</a></li>
+            <li><a asp-controller="FastAccess" asp-action="GreenMetric">Green Metric</a></li>
+            <li><a asp-controller="FastAccess" asp-action="InnovaLic">InnovaLic</a></li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default btn-lg btn-block btn-bg-color">İlkler</button>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Kurumsal Strateji
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a asp-controller="FastAccess" asp-action="StratejikPlan">Stratejik Plan 2020-2024</a></li>
+            <li><a asp-controller="FastAccess" asp-action="KalitePolitikasi">Kalite Politikası</a></li>
+            <li><a asp-controller="FastAccess" asp-action="SurekliIyilestirmeKoordinatorlugu">Sürekli İyileştirme</a></li>
+            <li><a asp-controller="FastAccess" asp-action="KİDR">KİDR</a></li>
+            <li><a href="#">Sürdürebilirlik Raporu</a></li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default  btn-lg btn-block btn-bg-color">İdari Birimler</button>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Kampüs Yaşamı
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a asp-controller="FastAccess" asp-action="BeslenmeHizmetleri">Yeme / İçme</a></li>
+            <li><a asp-controller="FastAccess" asp-action="SporMerkezleri">Spor Merkezleri</a></li>
+            <li><a href="#">Ulaşım</a></li>
+            <li><a asp-controller="FastAccess" asp-action="Barinma">Barınma</a></li>
+        </ul>
+    </div>
+    <a asp-controller="FastAccess" asp-action="ProtokolImzalananFirmalar" class="btn btn-default btn-lg btn-block btn-bg-color" role="button" aria-pressed="true">İşbirlikleri</a>
+    <button type="button" class="btn btn-default btn-lg btn-block btn-bg-color">Tanıtım Filmleri / Galeri</button>
+    <button type="button" class="btn btn-default btn-lg btn-block btn-bg-color">Yönetmelik ve Yönergeler</button>
+    <a asp-controller="FastAccess" asp-action="BGYSPolitikamiz" class="btn btn-default btn-lg btn-block btn-bg-color" role="button" aria-pressed="true">Bilgi Güvenliği Politikamız</a>
+
+</div>

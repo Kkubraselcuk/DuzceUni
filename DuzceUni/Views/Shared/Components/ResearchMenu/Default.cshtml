@@ -1,0 +1,22 @@
+﻿<style>
+
+    .active {
+        background-color: #4CAF50;
+    }
+
+    .btn-bg-color {
+        background-color: white;
+        /*background-color: #C8C6C6;*/
+    }
+
+    .btn:hover {
+        background-color: #FFA100;
+    }
+</style>
+<div class="btn-group-vertical" role="group" aria-label="...">
+    <a asp-controller="FastAccess" asp-action="ArastirmaMerkezleri" class="btn btn-default btn-lg btn-block btn-bg-color active" role="button" aria-pressed="true">Araştırma Merkezleri</a>
+    <a href="https://cdn.duzce.edu.tr/File/GetFile/d834bcb6-f351-49f7-98d2-b8b1dba20280" class="btn btn-default btn-lg btn-block btn-bg-color" role="button" aria-pressed="true">Laboratuvar Envanteri</a>
+    <a href="#" class="btn btn-default btn-lg btn-block btn-bg-color" role="button" aria-pressed="true">Yayınlanan Projeler</a>
+    <a href="#" class="btn btn-default btn-lg btn-block btn-bg-color" role="button" aria-pressed="true">Hakemli Dergiler</a>
+    <a asp-controller="FastAccess" asp-action="TeknolojiTransferOfisi" class="btn btn-default btn-lg btn-block btn-bg-color" role="button" aria-pressed="true">Teknoloji Transfer Ofisi</a>
+</div>

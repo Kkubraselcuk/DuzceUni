@@ -1,0 +1,29 @@
+﻿@model List<Cooperation>
+<section class="units">
+    <div class="row" style="width: 100vw; height: 15vh; background-color: rgb(75, 75, 75);"></div>
+    <div class="row">
+        <div class="col-md-2 col-sm-12">
+            @await Component.InvokeAsync("UniversityMenu")
+        </div>
+
+        <div class="col-md-10  col-sm-12">
+            <div class="container" style="margin-left:15px;">
+                <h2>Protokol İmzalanan Firmalar</h2><br />
+                <table class="table table-striped border">
+
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+                <br /><br /><br /><br /><br /><br /><br />
+            </div>
+        </div>
+    </div>
+</section>

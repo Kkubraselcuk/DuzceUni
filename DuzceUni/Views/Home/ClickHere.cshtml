@@ -1,0 +1,37 @@
+﻿@model List<DuzceWelcome>
+    <style>
+        p{text-align: justify;}
+    </style>
+<div class="container-fluid">
+    <div class="row" style="width: 100vw; height: 15vh; background-color: #595260"></div>
+</div>
+<div class="container" style="margin-bottom: 150px;">
+    @foreach (var item in Model)
+    {
+        <h5>@item.Date</h5>
+        <h2>@item.Title</h2>
+        <p>@item.Description</p>
+        <br />
+        <p>
+            <b>
+                @item.Name
+
+            </b>
+        </p>
+        <p><b> @item.Task</b></p><br />
+        <center>
+            <img src="@item.ImageUrl" />
+        </center>
+    }
+
+    
+
+
+
+
+
+
+
+
+
+</div>

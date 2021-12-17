@@ -1,0 +1,27 @@
+﻿@model List<SenateBoard>
+<section class="units">
+    <div class="row" style="width: 100vw; height: 15vh; background-color: rgb(75, 75, 75);"></div>
+    <div class="row">
+        <div class="col-md-2 col-sm-12">
+            @await Component.InvokeAsync("UniversityMenu")
+        </div>
+
+        <div class="col-md-10 col-sm-12">
+            <div class="container" style="margin-left:15px;">
+                <h2>Senato Kurulu</h2><br />
+                <table class="table table-striped border">
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Work.WorkName</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 500px;"></div>
+</section>

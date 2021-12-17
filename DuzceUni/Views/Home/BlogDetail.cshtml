@@ -1,0 +1,39 @@
+﻿
+@model DuzceUni.Models.Blog
+    <style>
+        .blogimg img {
+            width: 60vw;
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+<div class="container-fluid">
+    <div class="row" style="width: 100vw; height: 15vh; background-color: #595260"></div>
+    <div class="row" style="margin: 150px 150px;">
+        @*<div class="title">
+                <h1>Duyurular</h1>
+            </div>*@
+
+        <div class="row">
+
+            <div class="row">
+                <div class="month">@Model.Date</div>
+            </div>
+
+            <div class="row">
+                <h2>@Model.Title</h2><br />
+                <p>@Model.Description</p>
+
+            </div><br /><br />
+            <center>
+                <div class="blogimg">
+                    <img src=@Model.ImageUrl />
+                </div>
+            </center>
+        </div>
+
+        -
+    </div>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

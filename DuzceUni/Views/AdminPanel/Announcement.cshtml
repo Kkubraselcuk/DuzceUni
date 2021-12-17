@@ -1,0 +1,49 @@
+﻿@model List<Blog>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Duyuru";
+}
+
+<link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="~/font/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="~/css/style.css" type="text/css">
+<link href="~/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="~/owl-carousel/owl.theme.css" rel="stylesheet">
+<link rel="stylesheet" href="~/css/isotope-docs.css" media="screen">
+<link rel="stylesheet" href="~/css/baguetteBox.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+<h2>Duyurular</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Tarih</th>
+        <th>Başlık</th>
+        <th>Konu</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        
+    </tr>
+
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.Date</td>
+            <td>@d.Title</td>
+            <td>@d.Short_Description </td>
+            <td>@d.ImageUrl</td>
+            <td><a href="/AdminPanel/DeleteAnnouncement/@d.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/AdminPanel/UpdateAnnouncement/@d.Id" class="btn btn-success">Güncelle</a></td>
+            
+        </tr>
+
+
+    }
+</table>
+<div style="margin-bottom:1000px;"><br />
+    <a asp-action="AddAnnouncement" asp-controller="AdminPanel" class="btn btn-lg btn-warning">Duyuru ekle</a>
+</div>

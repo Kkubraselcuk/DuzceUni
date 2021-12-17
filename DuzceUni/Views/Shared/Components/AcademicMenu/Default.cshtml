@@ -1,0 +1,91 @@
+﻿<style>
+
+    .active {
+        background-color: #4CAF50;
+    }
+
+    .btn-bg-color {
+        background-color: white;
+        /*background-color: #C8C6C6;*/
+    }
+
+    .btn:hover {
+        background-color: #FFA100;
+    }
+</style>
+<div class="btn-group-vertical" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Fakülteler
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Akçakoca Bey Siyasal Bilgiler Fakültesi</a></li>
+            <li><a href="#">Eğitim Fakültesi</a></li>
+            <li><a href="#">Fen Edebiyat Fakültesi</a></li>
+            <li><a href="#">İlahiyat Fakültesi</a></li>
+            <li><a href="#">İşletme Fakültesi</a></li>
+            <li><a href="#">Mühendislik Fakültesi</a></li>
+            <li><a href="#">Orman Fakültesi</a></li>
+            <li><a href="#">Sağlık Bilimleri Fakültesi</a></li>
+            <li><a href="#">Sanat, Tasarım ve Mimarlık Fakültesi</a></li>
+            <li><a href="#">Spor Bilimleri Fakültesi</a></li>
+            <li><a href="#">Tıp Fakültesi</a></li>
+            <li><a href="#">Ziraat Fakültesi</a></li>
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Enstitüler
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Lisanüstü Eğitim Enstitüsü</a></li>
+            <li><a href="#">Güzel Sanatlar Enstitüsü</a></li>
+            <li><a href="#">Fen Bilimleri Enstitüsü</a></li>
+            <li><a href="#">Sağlık Bilimleri Enstitüsü</a></li>
+            <li><a href="#">Sosyal Bilimler Enstitüsü</a></li>
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Yüksekokullar
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Akçakoca Turizm İşl. ve O.Y.O.</a></li>
+            <li><a href="#">Hakime ERCİYAS Yabancu Diller Yüksekokulu</a></li>
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Meslek Yüksekokulları
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Akçakoca MYO</a></li>
+            <li><a href="#">Çilimli MYO</a></li>
+            <li><a href="#">Düzce MYO</a></li>
+            <li><a href="#">Dr. Engin PAK Cumayeri MYO</a></li>
+            <li><a href="#">Gölyaka MYO</a></li>
+            <li><a href="#">Gümüşova MYO</a></li>
+            <li><a href="#">Kaynaşlı MYO</a></li>
+            <li><a href="#">Ormancılık MYO</a></li>
+            <li><a href="#">Sağlık Hizmetleri MYO</a></li>
+            <li><a href="#">Sosyal Bilimler MYO</a></li>
+        </ul>
+    </div>
+    <a asp-controller="FastAccess" asp-action="Kurullar" class="btn btn-default btn-lg btn-block btn-bg-color" role="button" aria-pressed="true">Kurullar</a>
+
+    @*<button type="button" class="btn btn-default btn-lg btn-block btn-bg-color">Kurullar</button>*@
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block btn-bg-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Bölüm Başkanlıkları
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Atatürk İlkeleri ve İnkılap Tarihi Bölümü</a></li>
+            <li><a href="#">Türk Dili</a></li>
+        </ul>
+    </div>
+</div>
