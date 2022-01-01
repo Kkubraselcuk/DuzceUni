@@ -3,7 +3,8 @@
     <!-- =============== container =============== -->
     <div class="container-fluid">
         <div class="row" style="width: 100vw; height: 15vh; background-color: rgb(75, 75, 75);"></div>
-
+    </div>
+    <div class="container">
         <div class="row" style="margin: 50px 150px;">
 
             @*<div class="title row">
@@ -12,9 +13,9 @@
 
             @foreach (var yayin in Model)
             {
-                <div class="col-xs-12 col-sm-4 col-md-3 wow fadeInUp animated">
+                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInUp animated" style="margin-bottom: 50px;">
                     <a href="@yayin.Link">
-                        <img src="@yayin.ImageUrl" alt="Yayın" style="width: 200px;" />
+                        <img src="@yayin.ImageUrl" alt="Yayın" style="height: 200px;" />
                     </a><br />
                     <span>@yayin.Title</span><br />
                 </div>
