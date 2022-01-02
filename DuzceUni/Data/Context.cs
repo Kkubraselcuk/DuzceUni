@@ -24,5 +24,6 @@ namespace DuzceUni.Data
         public DbSet<GirisPanel> GirisPanels { get; set; }
         public DbSet<Success> Successes { get; set; }
         public DbSet<Publishing> Publishings { get; set; }
+        public DbSet<Gallery> Gallerys { get; set; }
     }
 }

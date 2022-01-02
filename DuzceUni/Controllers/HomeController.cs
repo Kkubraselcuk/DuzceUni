@@ -45,6 +45,11 @@ namespace DuzceUni.Controllers
             var duyur = c.Blogs.Find(id);
             return View("BlogDetail", duyur);
         }
+        public IActionResult Gallery()
+        {
+            var values = c.Gallerys.ToList();
+            return View(values);
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

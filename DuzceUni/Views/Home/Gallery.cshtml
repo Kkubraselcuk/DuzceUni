@@ -1,0 +1,27 @@
+﻿@model List<Gallery>
+<style>
+
+    .resim {
+        background: transparent;
+        padding: 8px;
+        border: 1px solid #ccc;
+        box-shadow: 5px 5px 5px #999;
+        margin-bottom: 15px;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row" style="width: 100vw; height: 15vh; background-color: rgb(75, 75, 75);"></div>
+</div>
+<div class="container">
+    <div class="row">
+        <center>
+            @foreach (var item in Model)
+            {
+                <div class="col">
+                    <img src="@item.ImageUrl" alt="Alternate Text" width="1000" class="resim" />
+                </div>
+            }
+            
+        </center>
+    </div>
+</div>
